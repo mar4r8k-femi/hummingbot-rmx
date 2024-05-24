@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install and start Hummingbot
+    init: |
+      git clone https://github.com/hummingbot/hummingbot.git
+      ./install
+      conda activate hummingbot
+      ./compile
+    command: |
+      ./start
